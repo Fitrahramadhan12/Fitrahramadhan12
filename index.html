@@ -55,7 +55,7 @@ h1 {
         th, td {
             border: 1px solid black;
             padding: 5px;
-            text-align: left;
+            text-align: center;
         }
     </style>
 </head>
@@ -73,7 +73,7 @@ h1 {
 	</tr>
 	<tr align="center">
         <td>Alamat</td>
-        <td><input type="text"></td>
+        <td><textarea name="tanggal peminjaman" rows="4" required></textarea></td>
 	</tr>
 	<tr align="center">
         <td>Jenis Kelamin</td>
@@ -97,7 +97,7 @@ h1 {
         <td><input type="date" name="Tanggal Lahir"></td>
 	</tr>
 	<tr align="center">
-        <td colspan="3" align="center">
+        <td colspan="3">
         <button>REGISTER</button></td>
 	</tr>
 </tbody>
@@ -174,11 +174,11 @@ h1 {
 	</tr>
 	<tr align="center">
         <td>Alamat</td>
-        <td><input type="text"></td>
+        <td><textarea name="Alamat" rows="4" required></textarea></td></td>
 	</tr>
 	<tr align="center">
         <th>Tanggal Pemesanan</th>
-        <td><textarea name="tanggal pemesanan" rows="4" required></textarea></td>
+        <td><input type="text"></td>
         </tr>
 	<tr align="center">
         <td>Nomor Handphone</td>
@@ -199,11 +199,14 @@ h1 {
 	</tr>
 	<tr>   
         <th>Penulis Buku</th>
-        <td><input type="text" name="penulis buku" required></td>
+        <td><input type="text" name="penulis buku"></td>
         </tr>
 	<tr align="center">
         <td>Nomor ISBN</td>
-        <td><input type="number" name="Nomor ISBN"></td>
+        <td><input type="text" name="Nomor ISBN"></td>
 	</tr>
+	<tr align="center">
+	<td style="text-align:center;"><input type="submit" value="Submit"></td>
+        </tr>
 </table>
 </html>
