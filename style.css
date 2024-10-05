@@ -40,10 +40,10 @@ nav ul li a.active{
   background-color: #005f5f;
 }
 .container{
-  max-width: 960px;
-  height: 500px;
-  margin: 20px;
-  padding: 20px;
+  max-width: auto;
+  height: auto;
+  margin: auto;
+  padding: auto;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, .1);
 }
