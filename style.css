@@ -13,11 +13,23 @@ header {
 h1 {
   margin: 1;
 }
+nav {
+  background: linear-gradient (to right, #00a6a6, #0070b8);
+  box-shadow: 0 px 7 px 10 px rgba(0, 0, 0, .1);
+}
+nav ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient (to right, #00a6a6, #0070b8);
+}
 container {
-  max-width: 960px;
-  height: 500px;
-  margin: 20px;
-  padding: 20px;
+  max-width: 960 px;
+  height: 500 px;
+  margin: 20 px;
+  padding: 20 px;
   background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  box-shadow: 0 0 10 px rgba (0, 0, 0, .1);
 }
