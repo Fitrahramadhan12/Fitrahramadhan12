@@ -42,7 +42,7 @@ nav ul li a.active{
 .container{
   max-width: 960px;
   height: 500px;
-  margin: 20px auto;
+  margin: auto;
   padding: auto;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 1.1);
