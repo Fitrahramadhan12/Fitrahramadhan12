@@ -19,81 +19,36 @@ header {
 h1 {
   margin: 1;
 }
-</style>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<header>
-    <h1>Perpanjangan Peminjaman Buku</h1>
-</header>
-<nav>
-	<ul>
-		<li>
-			<a href="index.html">Home</a>
-		</li>
-		<li class="dropdown">
-			<a href="javascript:void(0)" class="dropbtn">Layanan</a>
-			<div class="dropdown-content">
-				<a href="Formulir Anggota Perpustakaan.html">Formulir Anggota Perpustakaan</a>
-				<a href="Tabel Bahan Buku.html">Tabel Bahan Buku</a>
-				<a href="Pemesanan Buku.html">Pemesanan Buku</a>
-				<a href="Perpanjangan Peminjaman Buku.html">Perpanjangan Peminjaman Buku</a>
-			</div>
-		</li>
-		<li class="dropdown">
-				<a href="javascript:void(0)" class="dropbtn">Menu</a>
-			<div class="dropdown-content">
-				<a href="Modul 4.html">Perpustakaan Suka Baca</a>
-				<a href="Pameran Buku.html">Perpustakaan Online</a>
-			</div>
-		</li>
-		<li class="dropdown">
-				<a href="javascript:void(0)" class="dropbtn">Materi</a>
-			<div class="dropdown-content">
-				<a href="">Modul 1</a>
-				<a href="">Modul 3</a>
-				<a href="">Modul 5</a>
-			</div>
-		</li>
-	</ul>
-</nav>
+.site-footer {
+  background: linear-gradient(to right, #00a6a6, #0070b8);
+  padding: 20px 0;
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+}
 
-<body>
-<head>
-    <title>Formulir Data Diri</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            margin: 0 auto; /* Membuat tabel berada di tengah */
-            width: 430px; /* Atur lebar tabel di sini */
-            height: 200px; /* Atur tinggi tabel di sini */
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 5px;
-            text-align: center;
-        }
-    </style>
-</head>
-<p style="margin-bottom: 50px"><table border="1">
-	<tr style="background: linear-gradient(to right, #00a6a6, #0070b8);">
-	<th colspan="3" style="color: white;"><center>Formulir Perpanjangan Peminjaman Buku</center></th>
-	</tr>
-	<tr align="center">
-        <td>Tanggal Perpanjangan Peminjaman Buku</td>
-        <td><input type="date" name="Tanggal Perpanjang Peminjaman Buku"></td>
-	</tr>
-	<tr align="center">
-        <td>Alasan Perpanjangan</td>
-        <td><textarea name="Alasan Perpanjangan" rows="2" required></textarea></td>
-	</tr>
-	<tr align="center">
-        <td colspan="3">
-        <button>Kirim</button></td>
-	</tr>
-</table>
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-<head>
-<style>
+.footer-content p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1.1em;
+  margin: 15px 0 !important;
+}
+
+.copyright {
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -137,5 +92,83 @@ li.dropdown {
   display: block;
 }
 </style>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
+<body>
+<header>
+    <h1>PERPUSTAKAAN UNIVERSITAS WIDYATAMA</h1>
+</header>
+<nav>
+	<ul>
+		<li>
+				<a href="javascript:void(0)" class="dropbtn">Home</a>
+		</li>
+		<li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Layanan</a>
+			<div class="dropdown-content">
+				<a href="Formulir Anggota Perpustakaan.html">Formulir Anggota Perpustakaan</a>
+				<a href="Tabel Bahan Buku.html">Tabel Bahan Buku</a>
+				<a href="Pemesanan Buku.html">Pemesanan Buku</a>
+				<a href="Perpanjangan Peminjaman Buku.html">Perpanjangan Peminjaman Buku</a>
+			</div>
+		</li>
+		<li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Menu</a>
+			<div class="dropdown-content">
+				<a href="Modul 4.html">Perpustakaan Suka Baca</a>
+				<a href="Pameran Buku.html">Perpustakaan Online</a>
+			</div>
+		</li>
+		<li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Materi</a>
+			<div class="dropdown-content">
+				<a href="">Modul 1</a>
+				<a href="">Modul 3</a>
+				<a href="Modul 6.html">Modul 6</a>
+			</div>
+		</li>
+	</ul>
+</nav>
+<body>
+<head>
+    <title>Formulir Data Diri</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 0 auto; /* Membuat tabel berada di tengah */
+            width: 430px; /* Atur lebar tabel di sini */
+            height: 200px; /* Atur tinggi tabel di sini */
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<p style="margin-bottom: 50px"><table border="1">
+	<tr style="background: linear-gradient(to right, #00a6a6, #0070b8);">
+	<th colspan="3" style="color: white;"><center>Formulir Perpanjangan Peminjaman Buku</center></th>
+	</tr>
+	<tr align="center">
+        <td>Tanggal Perpanjangan Peminjaman Buku</td>
+        <td><input type="date" name="Tanggal Perpanjang Peminjaman Buku"></td>
+	</tr>
+	<tr align="center">
+        <td>Alasan Perpanjangan</td>
+        <td><textarea name="Alasan Perpanjangan" rows="2" required></textarea></td>
+	</tr>
+	<tr align="center">
+        <td colspan="3">
+        <button>Kirim</button></td>
+	</tr>
+</table>
+</body>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>Pertanyaan umum dan informasi: +62 8 1211 5576 (WhatsApp, hanya pada jam kerja)</p>
+    <p class="copyright">&copy; 2024 Perpustakaan Fitrah Ramadhan. All Rights Reserved.</p>
+  </div>
+</body>
 </html>
