@@ -118,3 +118,189 @@ nav .dropdown:hover .dropdown-content {
 		</li>
 	</ul>
 </nav>
+<style>
+        table {
+            border-collapse: collapse;
+            margin: 0 auto; /* Membuat tabel berada di tengah */
+            width: 430px; /* Atur lebar tabel di sini */
+            height: 200px; /* Atur tinggi tabel di sini */
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #00a6a6;
+}
+li {
+  float: left;
+}
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #0070b8;
+}
+li.dropdown {
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px #00a6a6;
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+
+<style>
+.content {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.content h2 {
+    color: #00a6a6;
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #00a6a6;
+}
+
+.content p {
+    color: #444;
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.content ol {
+    padding-left: 20px;
+}
+
+.content li {
+    margin-bottom: 15px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.content strong {
+    color: #0070b8;
+}
+
+.content code {
+    background: #f5f5f5;
+    padding: 3px 6px;
+    border-radius: 4px;
+    color: #e83e8c;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.content li:hover {
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
+}
+</style>
+
+<div class="content-wrapper">
+    <div class="content-left">
+        <div class="content">
+            <h2>Cara Menampilkan Data dalam JavaScript</h2>
+            <p>Terdapat beberapa cara untuk menampilkan data dalam JavaScript:</p>
+            <ol>
+                <li><strong>innerHTML</strong> - Metode ini digunakan untuk menampilkan data ke dalam elemen HTML.
+                    <br>Contoh: <code>document.getElementById("demo").innerHTML = "Hello World";</code></li>
+                
+                <li><strong>document.write()</strong> - Digunakan untuk menulis langsung ke dokumen HTML.
+                    <br>Namun, tidak disarankan digunakan setelah dokumen HTML dimuat karena akan menimpa seluruh konten yang ada.</li>
+                
+                <li><strong>console.log()</strong> - Metode ini digunakan untuk menampilkan data di console browser,
+                    <br>sangat berguna untuk debugging dan pengembangan.</li>
+                
+                <li><strong>alert()</strong> - Menampilkan data dalam bentuk pop-up box/dialog box.
+                    <br>Contoh: <code>alert("Hello World!");</code></li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="content-right">
+        <div class="calculator">
+            <h2 style="text-align: center;">Contoh Implementasi JavaScript</h2>
+            <h3>Kalkulator Denda Keterlambatan</h3>
+            <div class="input-group">
+                <label for="hariTerlambat">Jumlah hari keterlambatan:</label>
+                <input type="number" id="hariTerlambat" min="0" placeholder="Masukkan jumlah hari">
+            </div>
+            <button onclick="hitungDenda()">Hitung Denda</button>
+            <p id="hasilDenda"></p>
+        </div>
+    </div>
+</div>
+
+<style>
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.content-left {
+    flex: 1;
+    min-width: 0; /* Prevents flex item from overflowing */
+}
+
+.content-right {
+    flex: 1;
+    min-width: 0; /* Prevents flex item from overflowing */
+}
+
+/* Adjust existing styles */
+.content {
+    margin: 0; /* Remove margin since we're using gap in wrapper */
+}
+
+.calculator {
+    margin: 0; /* Remove margin since we're using gap in wrapper */
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+}
+</style>
+</html>
