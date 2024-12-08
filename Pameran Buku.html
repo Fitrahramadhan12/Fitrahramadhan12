@@ -1,0 +1,364 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>PERPUSTAKAAN UNIVERSITAS WIDYATAMA</title>
+<style>
+body {
+  margin: 0:
+  padding: 0:
+  font-family: Ariel, sans-serif;
+  background: #f0f0f0:
+}
+header {
+  background: linear-gradient(to right, #00a6a6, #0070b8);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+h1 {
+  margin: 1;
+}
+</style>
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="modul5.css">
+</head>
+<header>
+    <h1>Selamat Datang di Website Perpustakaan SUKA BACA</h1>
+</header>
+<style>
+.content {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.content h2 {
+    color: #00a6a6;
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #00a6a6;
+}
+
+.content p {
+    color: #444;
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.content ol {
+    padding-left: 20px;
+}
+
+.content li {
+    margin-bottom: 15px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.content strong {
+    color: #0070b8;
+}
+
+.content code {
+    background: #f5f5f5;
+    padding: 3px 6px;
+    border-radius: 4px;
+    color: #e83e8c;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.content li:hover {
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
+}
+</style>
+
+<div class="content-wrapper">
+    <div class="content-left">
+        <div class="content">
+            <h2>Cara Menampilkan Data dalam JavaScript</h2>
+            <p>Terdapat beberapa cara untuk menampilkan data dalam JavaScript:</p>
+            <ol>
+                <li><strong>innerHTML</strong> - Metode ini digunakan untuk menampilkan data ke dalam elemen HTML.
+                    <br>Contoh: <code>document.getElementById("demo").innerHTML = "Hello World";</code></li>
+                
+                <li><strong>document.write()</strong> - Digunakan untuk menulis langsung ke dokumen HTML.
+                    <br>Namun, tidak disarankan digunakan setelah dokumen HTML dimuat karena akan menimpa seluruh konten yang ada.</li>
+                
+                <li><strong>console.log()</strong> - Metode ini digunakan untuk menampilkan data di console browser,
+                    <br>sangat berguna untuk debugging dan pengembangan.</li>
+                
+                <li><strong>alert()</strong> - Menampilkan data dalam bentuk pop-up box/dialog box.
+                    <br>Contoh: <code>alert("Hello World!");</code></li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="content-right">
+        <div class="calculator">
+            <h2 style="text-align: center;">Contoh Implementasi JavaScript</h2>
+            <h3>Kalkulator Denda Keterlambatan</h3>
+            <div class="input-group">
+                <label for="hariTerlambat">Jumlah hari keterlambatan:</label>
+                <input type="number" id="hariTerlambat" min="0" placeholder="Masukkan jumlah hari">
+            </div>
+            <button onclick="hitungDenda()">Hitung Denda</button>
+            <p id="hasilDenda"></p>
+        </div>
+    </div>
+</div>
+
+<style>
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.content-left {
+    flex: 1;
+    min-width: 0; /* Prevents flex item from overflowing */
+}
+
+.content-right {
+    flex: 1;
+    min-width: 0; /* Prevents flex item from overflowing */
+}
+
+/* Adjust existing styles */
+.content {
+    margin: 0; /* Remove margin since we're using gap in wrapper */
+}
+
+.calculator {
+    margin: 0; /* Remove margin since we're using gap in wrapper */
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+}
+</style>
+
+<h2 style="text-align: center;">Pameran Buku</h2>
+<div class="pameran-buku">
+    <div class="book-display">
+        <img id="bookImage" src="bahan/koleksi.jpeg" alt="Buku">
+        <h3 id="bookTitle">Judul Buku</h3>
+        <p id="bookDescription">Arahkan kursor ke tombol di bawah untuk melihat detail buku</p>
+    </div>
+
+    <div class="book-controls">
+        <button onmouseover="showBook('Novel')" onmouseout="resetBook()">Novel</button>
+        <button onmouseover="showBook('Teknologi')" onmouseout="resetBook()">Teknologi</button>
+        <button onmouseover="showBook('Sejarah')" onmouseout="resetBook()">Sejarah</button>
+        <button onmouseover="showBook('Pendidikan')" onmouseout="resetBook()">Pendidikan</button>
+        <button onmouseover="showBook('Bisnis')" onmouseout="resetBook()">Bisnis</button>
+    </div>
+</div>
+
+<script>
+function showBook(category) {
+    const bookImage = document.getElementById('bookImage');
+    const bookTitle = document.getElementById('bookTitle');
+    const bookDescription = document.getElementById('bookDescription');
+    
+    // Definisikan path gambar untuk setiap buku
+    const bookData = {
+        'Novel': {
+            image: 'bahan/laskar.jpeg',
+            title: 'Laskar Pelangi',
+            description: 'Novel inspiratif karya Andrea Hirata yang menceritakan perjuangan anak-anak Belitung dalam mengejar pendidikan. Terbit tahun 2005, 529 halaman.'
+        },
+        'Teknologi': {
+            image: 'bahan/javascript.jpeg', 
+            title: 'JavaScript Modern',
+            description: 'Panduan lengkap JavaScript untuk pemula hingga mahir. Mencakup ES6+, DOM, Ajax, dan React. Ditulis oleh John Doe, terbit 2023, 400 halaman.'
+        },
+        'Sejarah': {
+            image: 'bahan/sejarah.jpeg', 
+            title: 'Sejarah Indonesia',
+            description: 'Menelusuri sejarah bangsa Indonesia dari masa pra-sejarah hingga modern. Ditulis oleh Prof. Dr. Ahmad Syafii Maarif, terbit 2020, 650 halaman.'
+        },
+        'Pendidikan': {
+            image: 'bahan/revolusi.jpeg', 
+            title: 'Revolusi Pendidikan',
+            description: 'Membahas transformasi pendidikan di era digital. Karya Dr. Sarah Johnson, terjemahan Budi Santoso, terbit 2022, 320 halaman.'
+        },
+        'Bisnis': {
+            image: 'bahan/star.jpeg', 
+            title: 'Start-Up Success',
+            description: 'Panduan membangun bisnis start-up dari nol hingga sukses. Karya Robert Kiyosaki, terjemahan Ahmad Dahlan, terbit 2023, 280 halaman.'
+        }
+    };
+
+    // Update konten
+    if (bookData[category]) {
+        bookImage.src = bookData[category].image;
+        bookTitle.textContent = bookData[category].title;
+        bookDescription.textContent = bookData[category].description;
+    }
+}
+
+function resetBook() {
+    const bookImage = document.getElementById('bookImage');
+    const bookTitle = document.getElementById('bookTitle');
+    const bookDescription = document.getElementById('bookDescription');
+    
+    bookImage.src = 'images/default-book.jpg';
+    bookTitle.textContent = 'Judul Buku';
+    bookDescription.textContent = 'Arahkan kursor ke tombol di bawah untuk melihat detail buku';
+}
+</script>
+
+<style>
+.pameran-buku {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.book-display {
+    text-align: center;
+    margin-bottom: 30px;
+    min-height: 500px;
+}
+
+.book-display img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+}
+
+.book-display h3 {
+    color: #00a6a6;
+    margin: 15px 0;
+    font-size: 1.5em;
+    min-height: 40px;
+}
+
+.book-display p {
+    color: #444;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    min-height: 80px;
+}
+
+.book-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.book-controls button {
+    background-color: #00a6a6;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 120px;
+    position: relative;
+}
+
+.book-controls button:hover {
+    background-color: #0070b8;
+}
+
+#bookDescription {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+</style>
+
+<style>
+    .calculator {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        margin: 20px auto;
+        max-width: 400px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    .calculator h3 {
+        color: #00a6a6;
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .input-group {
+        margin-bottom: 20px;
+    }
+    
+    .calculator label {
+        display: block;
+        margin-bottom: 8px;
+        color: #333;
+        font-weight: bold;
+    }
+    
+    .calculator input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+    
+    .calculator button {
+        background-color: #00a6a6;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .calculator button:hover {
+        background-color: #0070b8;
+    }
+    
+    #hasilDenda {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
+        color: #333;
+    }
+</style>
+</html>
